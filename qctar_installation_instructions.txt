@@ -1,0 +1,60 @@
+# QCTAR 2026 Workshop – Qiskit Setup
+
+To run the notebooks used in the QCTAR 2026 workshop, please create a fresh Python environment and install the required Qiskit packages.
+
+General Qiskit installation documentation can be found here:
+[https://docs.quantum.ibm.com/guides/install-qiskit](https://docs.quantum.ibm.com/guides/install-qiskit)
+
+First check if you have Conda installed. If not,install Miniconda (recommended):
+https://docs.conda.io/en/latest/miniconda.html
+
+## Create a Conda Environment
+
+Open a terminal and create a new environment:
+
+```
+conda create -n qctar_qiskit_23 python=3.10
+```
+## We need python 3.10 or above
+
+Confirm with `y` when prompted.
+
+Activate the environment:
+
+```
+conda activate qctar_qiskit_23
+```
+
+## Install Required Packages
+
+Install the required packages with:
+
+pip install qiskit==2.3.0 qiskit-aer==0.17.2 qiskit-algorithms==0.4.0 qiskit-ibm-runtime==0.45.1 qiskit-nature==0.7.2 'qiskit[visualization]' jupyter
+
+## Launch Jupyter
+
+Navigate to the directory containing the workshop notebooks and run:
+
+```
+jupyter notebook
+```
+
+Then open the desired notebook in your browser.
+
+## Verify Installation (Optional)
+
+You can verify the installation with:
+
+```
+pip list | grep qiskit
+```
+
+You should see versions similar to:
+
+```
+qiskit               2.3.0
+qiskit-aer           0.17.2
+qiskit-algorithms    0.4.0
+qiskit-ibm-runtime   0.45.1
+qiskit-nature        0.7.2
+```

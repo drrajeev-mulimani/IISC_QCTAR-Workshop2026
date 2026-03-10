@@ -1,0 +1,74 @@
+# QCTAR 2026 Workshop – Qiskit Setup
+
+To run the workshop notebooks, please install the required environment using Conda.
+
+If you do not yet have Conda installed, install Miniconda:
+[https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
+
+## Step 1 — Download the Environment File
+
+Create a file called `environment.yml` with the following contents:
+
+```
+name: qctar_qiskit_23
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - jupyter
+  - pip:
+      - qiskit==2.3.0
+      - qiskit-aer==0.17.2
+      - qiskit-algorithms==0.4.0
+      - qiskit-ibm-runtime==0.45.1
+      - qiskit-nature==0.7.2
+      - 'qiskit[visualization]'
+```
+
+### python=3.10 or higher. 
+
+## Step 2 — Create the Environment
+
+Open a terminal (macOS/Linux) or **Anaconda Prompt / PowerShell** (Windows) and run:
+
+```bash
+conda env create -f environment.yml
+```
+
+## Step 3 — Activate the Environment
+
+```bash
+conda activate qctar_qiskit_23
+```
+
+## Step 4 — Launch Jupyter
+
+Navigate to the folder containing the workshop notebooks and start Jupyter:
+
+```bash
+jupyter notebook
+```
+
+Then open the desired notebook in your browser.
+
+---
+
+### Optional: Verify the Installation
+
+```bash
+pip list | grep qiskit
+```
+
+Expected versions:
+
+```
+qiskit               2.3.0
+qiskit-aer           0.17.2
+qiskit-algorithms    0.4.0
+qiskit-ibm-runtime   0.45.1
+qiskit-nature        0.7.2
+```
+
+---
+
